@@ -8,7 +8,7 @@
 
 """Configuration for Invenio-Search-UI."""
 
-from .views import SearchAppInvenioRestConfigHelper
+from .views import blueprint, SearchAppInvenioRestConfigHelper
 
 SEARCH_UI_SEARCH_TEMPLATE = 'invenio_search_ui/search.html'
 """Configure the search page template."""
@@ -61,3 +61,6 @@ SEARCH_UI_SEARCH_CONFIG_GEN = {
     'invenio_records_rest': SearchAppInvenioRestConfigHelper,
 }
 """Override the Invenio-Search-JS config generator."""
+
+SEARCH_UI_SEARCH_BLUEPRINT = blueprint
+"""Override the Invenio-Search-UI blueprint."""

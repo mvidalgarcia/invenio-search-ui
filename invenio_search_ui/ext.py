@@ -31,7 +31,7 @@ class InvenioSearchUI(object):
         :param app: The Flask application.
         """
         self.init_config(app)
-        app.register_blueprint(blueprint)
+        app.register_blueprint(app.config.get('SEARCH_UI_SEARCH_BLUEPRINT'))
         app.extensions['invenio-search-ui'] = self
 
     def init_config(self, app):
